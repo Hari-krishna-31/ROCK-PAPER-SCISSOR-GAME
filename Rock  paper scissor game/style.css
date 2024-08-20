@@ -1,0 +1,312 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #91b5f8, #f3dd8d);
+    color: #d60c82;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+/* Heading styling */
+h1 {
+    font-size: 24px;
+    color: #333;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    padding: 10px 20px; /* Adjust padding to fit the text */
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 20px; /* Space from top */
+    width: auto; /* Fit to content width */
+    max-width: calc(100% - 40px); /* Adjust to ensure it fits within the viewport */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 1;
+    overflow: hidden; /* Prevent text overflow */
+}
+
+/* Wrapper for main content */
+.container-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-top: 80px; /* Add space at the top to make room for the heading */
+}
+
+/* Styling for the headings */
+h2 {
+    font-size: 18px;
+    margin: 10px 0;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Button styling */
+button {
+    background-color: #ffcc00;
+    border: none;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #ff9900;
+    transform: translateY(-4px);
+}
+
+/* Button active effect */
+button:active {
+    transform: translateY(1px);
+}
+
+/* Flex container for top containers */
+.top-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* Flex container for bottom containers */
+.bottom-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* Flex container for result containers */
+.results-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+/* Container styling with individual shadows */
+.container {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 2px solid #808500;
+    padding: 15px;
+    margin: 15px 0;
+    text-align: center;
+    width: 100%;
+    max-width: 360px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+}
+
+/* Styling for spans inside headings */
+#player_choice {
+    font-weight: bold;
+    color: #000000;
+}
+
+#bot_choice {
+    font-weight: bold;
+    color: #000304;
+}
+
+/* Result container styling */
+#result, #final_result {
+    font-size: 20px;
+    color: #f90a0a;
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid #ffcc00;
+    margin-top: 15px;
+    width: 100%;
+    max-width: 360px;
+    box-sizing: border-box;
+}
+
+/* Score and Remaining Rounds styling */
+#score, #remaining {
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Footer styling */
+.footer {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-sizing: border-box;
+}
+
+/* Footer heading styling */
+.footer h3 {
+    margin: 0;
+    font-size: 16px;
+    color: black;
+}
+
+/* Icons styling */
+.icons {
+    display: flex;
+    align-items: center;
+}
+
+.icons a {
+    color: #e300e3;
+    margin-left: 10px;
+    font-size: 24px;
+    transition: color 0.2s;
+}
+
+.icons a:hover {
+    color: #4169e1;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
+        padding: 10px;
+        margin: 15px 0;
+        margin-top: 10px;
+        /* Add margin to ensure space around heading */
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    button {
+        padding: 8px 15px;
+        font-size: 14px;
+        margin: 15px;
+    }
+
+    #result, #final_result {
+        font-size: 18px;
+        padding: 10px;
+        max-width: 90%;
+    }
+
+    .container {
+        padding: 0px;
+        max-width: 90%;
+        margin: 5px;
+    }
+
+    .top-container, .bottom-container, .results-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .footer {
+        position: static;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .footer h3 {
+        font-size: 14px;
+        margin-bottom: 5px;
+    }
+
+    .icons a {
+        font-size: 18px;
+        margin-left: 5px;
+    }
+
+    body {
+        padding-top: 80px; /* Ensure heading is not hidden by fixed header */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 18px;
+        padding: 8px;
+        margin: 10px 0; /* Add margin to ensure space around heading */
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 6px 12px;
+        font-size: 12px;
+        margin: 9px;
+    }
+
+    #result, #final_result {
+        font-size: 16px;
+        padding: 8px;
+        max-width: 95%;
+    }
+
+    .container {
+        padding: 2px;
+        max-width: 95%;
+    }
+
+    .top-container, .bottom-container, .results-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        margin: 2px;
+    }
+
+    .footer {
+        position: static;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        padding: 15px;
+        box-sizing: border-box;
+    }
+
+    .footer h3 {
+        font-size: 14px;
+    }
+
+    .icons a {
+        font-size: 18px;
+    }
+
+    body {
+        padding-top: 80px; /* Ensure heading is not hidden by fixed header */
+    }
+}
